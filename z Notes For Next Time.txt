@@ -1,0 +1,13 @@
+	MARS LIMIATIONS
+1) Look into bigger bitmap strats like allocating my own memory, (no clue if its possible)
+2) fix long hold glitch,coudl be bitmap related not sure
+3) find a way to double buffer
+	BUGS
+1) drawing sprite arrays are all kinds of broken, full of little hacks hoping it doesnt break
+
+	BETTER DESIGN
+1) start of every frame erase all sprites, end of every frame draw all sprites
+2) Max grid (AFAIK) is 64x64, woudl make sense to do an array for all map spots rather than pixel math
+3) for static background could do giant 64x64 image and every time someone moves you jsut get the old image background in EraseSprite
+4) Keep s registers consistent between functions, why are logs and cars so different when functions are fairly similar
+5) look into more than 4 args for a fucntion, maybe just use the t regs (probably bad to use S ones but who knows)
